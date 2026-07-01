@@ -1,0 +1,185 @@
+/* Googlefont Poppins CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cambria Math', sans-serif;
+}
+
+body {
+  min-height: 100dvh;
+  background-image: url('Neuro care unit.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #001900;
+  overflow-x: clip;
+}
+
+/* paragraph */
+#div {
+  position: absolute;
+  bottom: 20px;
+  right: 5px;
+  left: 5px;
+  width: auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #000000;
+  text-align: justify;
+  font-size: 18px;
+  padding: 15px;
+}
+
+@media (max-width: 768px) {
+  #div {
+    font-size: 15px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  #div {
+    font-size: 13px;
+    padding: 10px;
+    bottom: 5px;
+  }
+}
+
+/* Header (Navigationbar) */
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: red;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  z-index: 99;
+}
+
+nav .navbar {
+  height: 100%;
+  max-width: 1250px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  padding: 0 50px;
+  gap: 10px;
+}
+
+.navbar .logo {
+  font-size: 30px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+  flex-shrink: 1;
+}
+
+nav .navbar .nav-links {
+  line-height: 70px;
+  height: 100%;
+}
+
+nav .navbar .links {
+  display: flex;
+}
+
+nav .navbar .links li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0 14px;
+  height: 100%;
+  text-decoration: none;
+  white-space: nowrap;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav .navbar .links li .sub-menu {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  line-height: 40px;
+  background: #802A2A;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 4px 4px;
+  display: none;
+  z-index: 2;
+}
+
+/* menu / close icons */
+#menu-icon,
+#close-icon {
+  display: none;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Tablet and mobile */
+@media (max-width: 920px) {
+  nav .navbar {
+    max-width: 100%;
+    padding: 0 25px;
+  }
+
+  #menu-icon {
+    display: block;
+  }
+
+  nav .navbar .nav-links {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100dvh;
+    background: red;
+    line-height: normal;
+    padding: 20px;
+    transition: left 0.3s ease;
+    z-index: 100;
+  }
+
+  nav .navbar .nav-links.active {
+    left: 0;
+  }
+
+  #close-icon {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  nav .navbar .links {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav .navbar .links li {
+    padding: 10px 0;
+    height: auto;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  nav .navbar {
+    padding: 0 15px;
+  }
+
+  .navbar .logo {
+    font-size: 18px;
+  }
+}
